@@ -1,33 +1,34 @@
-# [Wieldy - React Redux Admin Template based on Ant Framework](https://themeforest.net/item/wieldy-react-redux-admin-template/22277962?s_rank=1 "Wieldy")
-Wieldy is a react redux based admin template. 
- 
-# Installation
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-**Note: Wieldy is using [yarn](https://yarnpkg.com/en/docs/install) instead npm**
+## Getting Started
 
-Installing all the dependencies of project, run following command:
+First, run the development server:
 
-``` $yarn ```
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-# Documentation
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-it is well documented at [here](http://docs.g-axon.com/wieldy/ "Documentation") .
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Branches
-| Branch                           | Description   |
-| -------------------------------- | ------------- |
-| `master`                         | This is the main production branch. You should pull from here to update your local repo. |
-| `starter-template`               | This branch is for you to kickstart your project with the starter template with auth (Firebase). This way you can start building your project from ground-up. |
-| `starter-template-without-auth`  | If you are looking to use a different authentication system, this is the right branch for you to start with. |
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-## Issues
-##### We accept issues here on GitHub but please follow the rules defined below before raising an issue:
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-* An issue must be related to coding. It should not be a general query. If you have any query, please ask that [here](https://themeforest.net/item/wieldy-react-redux-admin-template/22277962/support "Support for Wieldy")
-* You can request a feature as an issue. We will make this open for voting for other users. So that they can vote and we can build what is in demand.
-* While posting an issue be descriptive with the process to replicate the issue.
+## Learn More
 
-## Pull Requests
-We appreciate your collaboration. If you build something which you believe could help others in their project. You can make that as a pull request. But make sure that it should be in a genral uses rather then something which is built for a specific project.
+To learn more about Next.js, take a look at the following resources:
 
-We merge only those features which we find useful for the community.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
