@@ -35,7 +35,9 @@ function HorizontalNav() {
     const { pathname, navStyle } = settings;
 
     const selectedKeys = pathname.substr(1);
+    console.log('🚀 ~ file: HorizontalNav.js ~ line 38 ~ HorizontalNav ~ selectedKeys', selectedKeys);
     const defaultOpenKeys = selectedKeys.split('/')[1];
+    console.log('🚀 ~ file: HorizontalNav.js ~ line 39 ~ HorizontalNav ~ defaultOpenKeys', defaultOpenKeys);
     return (
         <Menu defaultOpenKeys={[defaultOpenKeys]} selectedKeys={[selectedKeys]} mode="horizontal">
             <SubMenu className={() => getNavStyleSubMenuClass(navStyle)} key="main" title="Trang chủ">

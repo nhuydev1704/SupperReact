@@ -3,8 +3,8 @@ import NProgress from 'nprogress';
 import { Provider } from 'react-redux';
 
 import store from 'app-redux';
-import 'styles/style.min.css';
 import '../assets/css/index.css';
+import 'styles/style.min.css';
 
 NProgress.configure({ showSpinner: false });
 Router.events.on('routeChangeStart', () => NProgress.start());

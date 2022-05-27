@@ -1,4 +1,5 @@
 import { Button, Dropdown, Layout, Menu, message, Popover, Select } from 'antd';
+import { TAB_SIZE } from 'app-constants/ThemeSettings';
 import { SettingActions } from 'app-redux/settings';
 import CustomScrollbars from 'components/CustomScrollbars';
 import AppNotification from 'componentUis/AppNotification';
@@ -6,7 +7,7 @@ import MailNotification from 'componentUis/MailNotification';
 import SearchBox from 'componentUis/SearchBox';
 import Link from 'next/link';
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import HorizontalNav from '../HorizontalNav';
 import languageData from '../languageData';
 import UserInfo from '../UserInfo';
@@ -107,11 +108,11 @@ const AboveHeader = () => {
                                 }}
                             />
                         </div>
-                        <Link to="/" className="gx-d-block gx-d-lg-none gx-pointer gx-mr-xs-3 gx-pt-xs-1 gx-w-logo">
-                            <img alt="" src={require('assets/images/w-logo.png')} />
+                        <Link href="/" className="gx-d-block gx-d-lg-none gx-pointer gx-mr-xs-3 gx-pt-xs-1 gx-w-logo">
+                            <img alt="" src={require('assets/images/w-logo.png').default.src} />
                         </Link>
-                        <Link to="/" className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo">
-                            <img alt="" src={require('assets/images/logo.png')} />
+                        <Link href="/" className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo">
+                            <img alt="" src={require('assets/images/logo.png').default.src} />
                         </Link>
                         <div className="gx-header-search gx-d-none gx-d-lg-flex">
                             <SearchBox

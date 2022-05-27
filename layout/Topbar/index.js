@@ -55,7 +55,7 @@ function TopBar() {
                     </div>
                 ) : null}
                 <Link href="/" className="gx-d-block gx-d-lg-none gx-pointer">
-                    <img alt="" src={require('assets/images/w-logo.png')} />
+                    <img alt="" src={require('assets/images/w-logo.png').default.src} />
                 </Link>
 
                 <SearchBox

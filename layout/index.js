@@ -26,6 +26,7 @@ import {
     TAB_SIZE,
 } from 'app-constants/ThemeSettings';
 import { SettingActions } from 'app-redux/settings';
+import Customizer from './Customizer';
 
 const { Content, Footer } = Layout;
 
@@ -53,7 +54,6 @@ function AppLayout({ children }) {
         }
     };
     const getNavStyles = (navStyle) => {
-        console.log('🚀 ~ file: index.js ~ line 53 ~ getNavStyles ~ navStyle', navStyle);
         switch (navStyle) {
             case NAV_STYLE_DEFAULT_HORIZONTAL:
                 return <HorizontalDefault />;
@@ -113,11 +113,12 @@ function AppLayout({ children }) {
                     <div className="gx-main-content-wrapper">{children}</div>
                     <Footer>
                         <div className="gx-layout-footer-content">
-                            <div className="gx-layout-footer-content">Insight Smart Ecommerce - GR - 2021</div>
+                            <div className="gx-layout-footer-content">Nguyễn Như Ý - NhuYdev - 2022</div>
                         </div>
                     </Footer>
                 </Content>
             </Layout>
+            <Customizer />
         </Layout>
     );
 }

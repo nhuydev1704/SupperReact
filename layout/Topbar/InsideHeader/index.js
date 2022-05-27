@@ -1,4 +1,4 @@
-import { Button, Dropdown, Layout, Popover } from 'antd';
+import { Button, Dropdown, Layout, Menu, message, Popover } from 'antd';
 import { SettingActions } from 'app-redux/settings';
 import CustomScrollbars from 'components/CustomScrollbars';
 import AppNotification from 'componentUis/AppNotification';
@@ -11,6 +11,22 @@ import HorizontalNav from '../HorizontalNav';
 import languageData from '../languageData';
 import UserInfo from '../UserInfo';
 const { Header } = Layout;
+
+const menu = (
+    <Menu onClick={handleMenuClick}>
+        <Menu.Item key="1">Products</Menu.Item>
+        <Menu.Item key="2">Apps</Menu.Item>
+        <Menu.Item key="3">Blogs</Menu.Item>
+    </Menu>
+);
+
+function handleMenuClick(e) {
+    message.info('Click on menu item.');
+}
+
+function handleChange(value) {
+    console.log(`selected ${value}`);
+}
 const InsideHeader = () => {
     const settings = useSelector((state) => state.settings);
     const { locale, navCollapsed } = settings;
@@ -65,11 +81,11 @@ const InsideHeader = () => {
                                 }}
                             />
                         </div>
-                        <Link to="/" className="gx-d-block gx-d-lg-none gx-pointer gx-mr-xs-3 gx-pt-xs-1 gx-w-logo">
-                            <img alt="" src={require('assets/images/w-logo.png')} />
+                        <Link href="/" className="gx-d-block gx-d-lg-none gx-pointer gx-mr-xs-3 gx-pt-xs-1 gx-w-logo">
+                            <img alt="" src={require('assets/images/w-logo.png').default.src} />
                         </Link>
-                        <Link to="/" className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo">
-                            <img alt="" src={require('assets/images/logo.png')} />
+                        <Link href="/" className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo">
+                            <img alt="" src={require('assets/images/logo.png').default.src} />
                         </Link>
 
                         <div className="gx-header-horizontal-nav gx-header-horizontal-nav-curve gx-d-none gx-d-lg-block">

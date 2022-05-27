@@ -1,4 +1,4 @@
-import { Button, Dropdown, Layout, Menu, Popover, Select } from 'antd';
+import { Button, Dropdown, Layout, Menu, message, Popover, Select } from 'antd';
 import { SettingActions } from 'app-redux/settings';
 import CustomScrollbars from 'components/CustomScrollbars';
 import AppNotification from 'componentUis/AppNotification';
@@ -85,10 +85,10 @@ const HorizontalDark = () => {
                             />
                         </div>
                         <Link href="/" className="gx-d-block gx-d-lg-none gx-pointer gx-mr-xs-3 gx-pt-xs-1 gx-w-logo">
-                            <img alt="" src={require('assets/images/w-logo.png')} />
+                            <img alt="" src={require('assets/images/w-logo.png').default.src} />
                         </Link>
                         <Link href="/" className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo">
-                            <img alt="" src={require('assets/images/logo.png')} />
+                            <img alt="" src={require('assets/images/logo.png').default.src} />
                         </Link>
                         <div className="gx-header-search gx-d-none gx-d-lg-flex">
                             <SearchBox
@@ -161,7 +161,7 @@ const HorizontalDark = () => {
                                 <Popover
                                     overlayClassName="gx-popover-horizantal"
                                     placement="bottomRight"
-                                    content={this.languageMenu()}
+                                    content={languageMenu()}
                                     trigger="click"
                                 >
                                     <span className="gx-pointer gx-flex-row gx-align-items-center">

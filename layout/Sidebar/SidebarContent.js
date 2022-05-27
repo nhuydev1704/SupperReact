@@ -25,7 +25,7 @@ const items = [
         children: [
             {
                 label: 'Dashboard',
-                key: '',
+                key: 'dashboard',
                 icon: <i className="icon icon-dasbhoard" />,
                 children: [
                     { label: 'Crypto', key: 'main/dashboard/crypto', icon: <i className="icon icon-crypto" /> },
@@ -62,7 +62,7 @@ function SidebarContent() {
     };
 
     const selectedKeys = pathname.substr(1);
-    const defaultOpenKeys = selectedKeys.split('/')[1];
+    const defaultOpenKeys = selectedKeys.split('/')[1] || 'dashboard';
 
     return (
         <Auxiliary>
@@ -80,6 +80,7 @@ function SidebarContent() {
                             theme={themeType === THEME_TYPE_LITE ? 'lite' : 'dark'}
                             mode="inline"
                             items={items}
+                            onClick={(e) => router.push('/' + e.key)}
                         />
                     </div>
                 </CustomScrollbars>

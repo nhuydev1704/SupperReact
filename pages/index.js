@@ -1,4 +1,17 @@
-import withLayout from "hoc/with-layout";
-import PageContent from "main/home";
+import { useRouter } from 'next/router';
+import React from 'react';
 
-export default withLayout(PageContent);
+const HomePage = () => {
+    const router = useRouter();
+    console.log('🚀 ~ file: index.js ~ line 6 ~ HomePage ~ router', router);
+
+    React.useEffect(() => {
+        if (router.asPath === '/') {
+            router.push('/main/dashboard/crypto');
+        }
+    }, [router]);
+
+    return <></>;
+};
+
+export default HomePage;
