@@ -25,13 +25,18 @@ const items = [
         children: [
             {
                 label: 'Dashboard',
-                key: 'dashboard',
+                key: 'main/dashboard',
                 icon: <i className="icon icon-dasbhoard" />,
                 children: [
                     { label: 'Crypto', key: 'main/dashboard/crypto', icon: <i className="icon icon-crypto" /> },
                     { label: 'CRM', key: 'main/dashboard/crm', icon: <i className="icon icon-crypto" /> },
                     { label: 'Listing', key: 'main/dashboard/listing', icon: <i className="icon icon-crypto" /> },
                 ],
+            },
+            {
+                label: 'Cá nhân',
+                key: 'main/personal',
+                icon: <i className="icon icon-widgets" />,
             },
         ],
     },
